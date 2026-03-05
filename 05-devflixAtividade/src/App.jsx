@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"; // useState - Ele controla o estado do item |
 import "./App.css";
 
-import logo from "./assets/devflix.png";
+import logo from "./assets/POTATOFLIX.png";
 import lupa from "./assets/search.svg";
 
 import Rodape from "./components/Rodape/Rodape";
