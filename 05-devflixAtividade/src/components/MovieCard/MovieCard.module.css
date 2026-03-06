@@ -10,27 +10,19 @@
 
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-  /*mpdificando o primeiro item da div do .movie*/
-  /*Movie*/
   & div:nth-of-type(1) {
     position: absolute;
-    inset-block-start: 0;
-    inset-inline: 0;
     z-index: 3;
     width: 100%;
     top: 0;
-    color: #ffc916;
+    color: var(--text-primary);
     font-weight: bold;
-    transition: opacity 0.3s ease;
     text-align: center;
-    opacity: 1;
-    padding: 16px;
-
-    background-color: var(--bg-secondary);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    padding: 10px 0;
+    background: var(--bg-secondary);
   }
-
-  /*modificando o segundo item da div .movie*/
-  /*Imagem*/
 
   & div:nth-of-type(2) {
     height: 100%;
@@ -42,8 +34,6 @@
     }
   }
 
-  /*Modificando o terceiro item "div" do elemento .movie*/
-  /*Titulo*/
   & div:nth-of-type(3) {
     z-index: 2;
     position: absolute;
@@ -57,7 +47,7 @@
 
     & span {
       text-transform: uppercase;
-      font-style: 13px;
+      font-size: 13px;
       letter-spacing: 2px;
       font-weight: bold;
       color: var(--text-secondary);
@@ -65,23 +55,21 @@
 
     & h3 {
       margin-top: 5px;
-      color: #ffc916;
+      color: var(--text-primary);
       transition: color 0.3s ease;
     }
   }
 
-  /*Estado ao passar o mouse por cima do bloco "MovieCard"*/
   &:hover {
     box-shadow: 0 30px 18px -8px rgba(0, 0, 0, 0.4);
     transform: scale(1.05);
 
     & div:nth-of-type(1) {
-      opacity: 0.1;
+      opacity: 1;
     }
+
     & div:nth-of-type(2) {
-      opacity: 0.8;
-    }
-    & div:nth-of-type(3) {
+      opacity: 0.7;
     }
   }
 }

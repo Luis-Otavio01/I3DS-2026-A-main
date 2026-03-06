@@ -4,7 +4,6 @@ import MovieDescription from "../MovieDescription/MovieDescription";
 
 const MovieCard = (props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // console.log(isModalOpen);
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
@@ -31,6 +30,7 @@ const MovieCard = (props) => {
         <MovieDescription
           apiUrl={props.apiUrl}
           movieID={props.imdbID}
+          language={props.language}
           click={toggleModal}
         />
       )}
